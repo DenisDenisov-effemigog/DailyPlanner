@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;562;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <header class="header">
+                <div class="container header__container">
+                    <div class="header__title">
+                        <p>Daily Planner</p>
+                    </div>
+                    <div class="header__nav">
+                        <ul class="header_nav__list">
+                            <li data-name="home" class="header_nav__item">
+                                <a href="" class="header_nav__link">Start page</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <maincontent class="main">
+                <section data-name="home" class="section first__section active_section section_opacity">
+                    <div class="container first_section__container">
+                        <div class="first_section__desc">
+                            <div class="left__block">
+                                <p>Hello! Here you can create your own home assistant. Welcome!
+                                </p>
+                            </div>
+                            <aside class="aside">
+                                <nav class="aside__nav">
+                                    <ul class="nav__list">
+                                        <li class="nav__item">
+                                            <div class="nav__desc">
+                                                <a href="#" data-name='calendar' id="openCalendar" class="nav__link">Open your daily planner</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </aside>
+                        </div>
+                    </div>
+                </section>
+                <section data-name="calendar" class="second__section section">
+                    <div class="container second_section__container">
+                        <div class="calendar" id="calendar">
+                        </div>
+                        <div class="calendar__data">
+                            <div class="container data__container">
+                                <div class="data__date">
+                                    <p class="date__number"></p>
+                                    <p class="date__mounth_name"></p>
+                                    <p class="date__day_name"></p>
+                                </div>
+                                <div class="date__desc">
+                                    <div id='note' class="note__desc">
+                                        <ul class="note__list">
+                                        </ul>
+                                        <template id="data">
+                                            <li class="note__item">
+                                                <div class="note__info">
+                                                    <div class="note__topic"></div>
+                                                    <div class="note__time">
+                                                        <p class="hour">1 in </p>
+                                                        <p class="min">1</p>
+                                                    </div>
+                                                </div>
+                                                <div class="note__main">
+                                                        <p class="note__main_text">
+                                                        </p>
+                                                        <button class="note__main_close_btn">Х</button>
+                                                </div>
+                                                <button class="note_edit__btn">. . .</button>
+                                                <button onclick="deleteNote()" class="note_delete__btn">х</button>
+                                            </li>
+                                        </template>
+                                    </div>
+                                </div>
+                                <div class="date__form">
+                                    <form action="" id="form" class="form">
+                                        <div class="form__column">
+                                            <label for="" class="form__label form__label_input">
+                                                <span class="input__name">subject</span>
+                                                <input name="top" type="text" class="form__input">
+                                            </label>
+                                            <label for="" class="form__label form__label_textarea">
+                                                <span class="textarea__name">Description</span>
+                                                <textarea name="text" class="form__textarea" name="" id="" cols="30"
+                                                    rows="10"></textarea>
+                                            </label>
+                                            <label for="" class="form__label form__label_select">
+                                                <span class="select__name">Time</span>
+                                                <select name="hour" class="form__select form__select_hour" name=""
+                                                    id="">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                </select>
+                                                <span> - </span>
+                                                <select name="secondHour" class="form__select form__select_second_hour"
+                                                    name="" id="">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                </select>
+                                            </label>
+                                            <label for="" class="form__label form__label_checkbox">
+                                                <input type="checkbox" class="form__checkbox">
+                                                <span class="checkbox__name">urgently</span>
+                                            </label>
+                                            <button type="submit" class="form__button">Write down</button>
+                                            <button type="button" class="form__cancel_button">Cancel</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="data__buttons">
+                                    <button class="open__form">Add a note</button>
+                                    <button class="data__close">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </maincontent>
+            <footer class="footer">
+                <div class="container footer__container">
+                    <div class="footer__logo">
+                        <p>Let every new day be better...</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
